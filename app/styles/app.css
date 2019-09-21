@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.sudoku-board {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  justify-content: center;
+  margin: 0 auto;
+  outline: 2px solid black;
+  width: 600px;
+}
+
+.box {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.cell {
+  display: flex;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  height: 100%;
+  align-items: center;
+  cursor: text;
+}
+
+.cell:focus-within {
+  outline-color:rgba(0, 103, 244, 0.247);
+  outline-offset:-4px;
+  outline-style:auto;
+  outline-width:5px;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+.status {
+  margin: 10px;
+  text-align: center;
+}

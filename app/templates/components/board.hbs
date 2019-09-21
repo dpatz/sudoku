@@ -1,0 +1,20 @@
+<div class="sudoku-board">
+  {{#each this.boxes as |box boxIndex|}}
+    <div class="box">
+      {{#each box as |cell cellIndex|}}
+        <label class="cell">
+          <CellInput @value={{cell}} @onUpdate={{action this.updateBoard boxIndex cellIndex}} />
+        </label>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>
+
+<h2 class="status">
+  Board is
+  {{#if this.isValid}}
+    valid 🎉
+  {{else}}
+    invalid
+  {{/if}}
+</h2>
